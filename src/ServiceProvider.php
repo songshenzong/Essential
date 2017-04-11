@@ -1,6 +1,6 @@
 <?php
 
-namespace Songshenzong\Essential;
+namespace Songshenzong\Essentials;
 
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
