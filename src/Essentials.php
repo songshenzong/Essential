@@ -50,7 +50,6 @@ class Essentials
         if (isset($value) && !empty($value) && $value != 'null') {
             return true;
         }
-
         return false;
     }
 }
