@@ -1,13 +1,13 @@
 <?php
 
-if (!function_exists('essential')) {
+if (!function_exists('essentials')) {
     /**
      * Get the instance
      *
-     * @return \Songshenzong\ResponseJson\Essential
+     * @return \Songshenzong\Essentials\Essentials
      */
-    function essential()
+    function essentials()
     {
-        return app('Essential');
+        return app('Essentials');
     }
 }

@@ -1,13 +1,13 @@
-# Essential
+# Essentials
 
-Essential Methods for Laravel
+Essentials Methods for Laravel
 
 ## Installation
 
 Require this package with composer:
 
 ```shell
-composer require songshenzong/essential
+composer require songshenzong/essentials
 ```
 
 After updating composer, add the ServiceProvider to the providers array in `config/app.php`
@@ -15,5 +15,5 @@ After updating composer, add the ServiceProvider to the providers array in `conf
 ### Laravel 5.x:
 
 ```php
-Songshenzong\Essential\ServiceProvider::class,
+Songshenzong\Essentials\ServiceProvider::class,
 ```

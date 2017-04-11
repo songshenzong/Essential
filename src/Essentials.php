@@ -1,8 +1,8 @@
 <?php
 
-namespace Songshenzong\Essential;
+namespace Songshenzong\Essentials;
 
-class Essential
+class Essentials
 {
 
     /**

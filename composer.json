@@ -1,6 +1,6 @@
 {
-  "name": "songshenzong/essential",
-  "description": "Essential Methods for Laravel",
+  "name": "songshenzong/essentials",
+  "description": "Essentials Methods for Laravel",
   "keywords": [
     "laravel",
     "response",
@@ -9,8 +9,8 @@
   "license": "MIT",
   "homepage": "http://songshenzong.com",
   "support": {
-    "issues": "https://github.com/songshenzong/essential/issues",
-    "source": "https://github.com/songshenzong/essential"
+    "issues": "https://github.com/songshenzong/essentials/issues",
+    "source": "https://github.com/songshenzong/essentials"
   },
   "authors": [
     {
@@ -24,7 +24,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Songshenzong\\Essential\\": "src/"
+      "Songshenzong\\Essentials\\": "src/"
     },
     "files": [
       "src/Helpers.php"

@@ -19,11 +19,11 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        $this -> app -> singleton('Essential', function ($app) {
-            return new Essential($app);
+        $this -> app -> singleton('Essentials', function ($app) {
+            return new Essentials($app);
         });
 
-        $this -> app -> alias('Essential', 'Songshenzong\Essential\Facade');
+        $this -> app -> alias('Essentials', 'Songshenzong\Essentials\Facade');
     }
 
 }
