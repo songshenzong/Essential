@@ -4,10 +4,11 @@ namespace Songshenzong\Essential;
 
 class Essential
 {
+
     /**
      * Parameters Validator.
      *
-     * @param $parameters
+     * @param $payload
      * @param $rules
      *
      * @return mixed

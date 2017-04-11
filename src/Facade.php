@@ -4,7 +4,6 @@ namespace Songshenzong\Essential;
 
 class Facade extends \Illuminate\Support\Facades\Facade
 {
-
     /**
      * @return string
      */
