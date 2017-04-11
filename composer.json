@@ -1,0 +1,39 @@
+{
+  "name": "songshenzong/essential",
+  "description": "Essential Methods for Laravel",
+  "keywords": [
+    "laravel",
+    "response",
+    "web"
+  ],
+  "license": "MIT",
+  "homepage": "http://songshenzong.com",
+  "support": {
+    "issues": "https://github.com/songshenzong/essential/issues",
+    "source": "https://github.com/songshenzong/essential"
+  },
+  "authors": [
+    {
+      "name": "Connor Niu",
+      "email": "connor.niu@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5.9",
+    "dingo/api": "1.0.*@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "Songshenzong\\Essential\\": "src/"
+    },
+    "files": [
+      "src/Helpers.php"
+    ]
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.1-dev"
+    }
+  },
+  "minimum-stability": "dev"
+}
