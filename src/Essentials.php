@@ -15,7 +15,12 @@ class Essentials
      */
     public function validator($payload, $rules)
     {
-        $validator = app('validator') -> make($payload, $rules);
+
+        if (is_array($payload)) {
+            $validator = app('validator') -> make($payload, $rules);
+        } else {
+            $validator = app('validator') -> make($payload -> all(), $rules);
+        }
 
         if ($validator -> fails()) {
             return app('ResponseJson') -> validationHttpException('Validation Exception', $validator -> errors());
