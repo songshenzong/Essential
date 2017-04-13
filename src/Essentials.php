@@ -23,7 +23,7 @@ class Essentials
         }
 
         if ($validator -> fails()) {
-            return app('ResponseJson') -> validationHttpException('Validation Exception', $validator -> errors());
+            return app('ResponseJson') -> validationHttpException('', $validator -> errors());
         }
     }
 
