@@ -23,7 +23,7 @@ class Essentials
         }
 
         if ($validator -> fails()) {
-            return app('ResponseJson') -> validationHttpException('Unprocessable Entity', $validator -> errors());
+            return app('ResponseJson') -> unprocessableEntityException(env('ESSENTIALS_VALIDATOR_MESSAGE', 'Unprocessable Entity'), $validator -> errors());
         }
     }
 

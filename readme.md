@@ -17,3 +17,9 @@ After updating composer, add the ServiceProvider to the providers array in `conf
 ```php
 Songshenzong\Essentials\ServiceProvider::class,
 ```
+
+
+### Validator Message
+```
+ESSENTIALS_VALIDATOR_MESSAGE="VALIDATOR ERROR"
+```
