@@ -25,5 +25,4 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
         $this -> app -> alias('Essentials', 'Songshenzong\Essentials\Facade');
     }
-
 }

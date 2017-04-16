@@ -15,7 +15,6 @@ class Essentials
      */
     public function validator($payload, $rules)
     {
-
         if (is_array($payload)) {
             $validator = app('validator') -> make($payload, $rules);
         } else {
