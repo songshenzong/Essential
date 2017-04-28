@@ -104,5 +104,4 @@ class Essentials
 
         return $geo_coder;
     }
-
 }
