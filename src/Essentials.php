@@ -22,7 +22,7 @@ class Essentials
         }
 
         if ($validator -> fails()) {
-            return app('ResponseJson') -> unprocessableEntity(env('ESSENTIALS_VALIDATOR_MESSAGE', 'Unprocessable Entity'), $validator -> errors());
+            return app('SongshenzongApi') -> unprocessableEntity(env('ESSENTIALS_VALIDATOR_MESSAGE', 'Unprocessable Entity'), $validator -> errors());
         }
     }
 
