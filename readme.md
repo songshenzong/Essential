@@ -19,7 +19,17 @@ Songshenzong\Essentials\ServiceProvider::class,
 ```
 
 
-### Validator Message
-```
-ESSENTIALS_VALIDATOR_MESSAGE="VALIDATOR ERROR"
-```
+
+## Documentation
+
+Please refer to our extensive [Wiki documentation](https://github.com/songshenzong/essentials/wiki) for more information.
+
+
+## Support
+
+For answers you may not find in the Wiki, avoid posting issues. Feel free to ask for support on Songshenzong.com
+
+
+## License
+
+This package is licensed under the [BSD 3-Clause license](http://opensource.org/licenses/BSD-3-Clause).
