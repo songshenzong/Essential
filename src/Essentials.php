@@ -5,26 +5,6 @@ namespace Songshenzong\Essentials;
 class Essentials
 {
 
-    /**
-     * Parameters Validator.
-     *
-     * @param $payload
-     * @param $rules
-     *
-     * @return mixed
-     */
-    public function validator($payload, $rules)
-    {
-        if (is_array($payload)) {
-            $validator = app('validator') -> make($payload, $rules);
-        } else {
-            $validator = app('validator') -> make($payload -> all(), $rules);
-        }
-
-        if ($validator -> fails()) {
-            return app('SongshenzongApi') -> unprocessableEntity(env('ESSENTIALS_VALIDATOR_MESSAGE', 'Unprocessable Entity'), $validator -> errors());
-        }
-    }
 
     /**
      * Is Set and Not Empty.
