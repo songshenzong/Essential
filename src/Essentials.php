@@ -44,12 +44,12 @@ class Essentials
      */
     public function excel($filename, $data)
     {
-        \Excel ::create($filename, function ($excel) use ($filename, $data) {
-            $excel -> sheet($filename, function ($sheet) use ($data) {
-                $sheet -> fromArray($data);
+        \Excel::create($filename, function ($excel) use ($filename, $data) {
+            $excel->sheet($filename, function ($sheet) use ($data) {
+                $sheet->fromArray($data);
             });
         })
-               -> export('xlsx');
+              ->export('xlsx');
     }
 
 
@@ -78,8 +78,8 @@ class Essentials
             ],
         ];
 
-        $geo_coder = $client -> request('POST', $url, $parameters);
-        $geo_coder = json_decode($geo_coder -> getBody());
+        $geo_coder = $client->request('POST', $url, $parameters);
+        $geo_coder = json_decode($geo_coder->getBody());
 
         return $geo_coder;
     }
@@ -99,13 +99,13 @@ class Essentials
         $time  = time() - $time;
         if ($time < 60) {
             $str = '刚刚';
-        } elseif ($time < 60 * 60) {
+        } else if ($time < 60 * 60) {
             $min = floor($time / 60);
             $str = $min . '分钟前';
-        } elseif ($time < 60 * 60 * 24) {
+        } else if ($time < 60 * 60 * 24) {
             $h   = floor($time / (60 * 60));
             $str = $h . '小时前';
-        } elseif ($time < 60 * 60 * 24 * 3) {
+        } else if ($time < 60 * 60 * 24 * 3) {
             $d = floor($time / (60 * 60 * 24));
             if ($d == 1) {
                 $str = '昨天 ' . $rtime;
@@ -117,4 +117,71 @@ class Essentials
         }
         return $str;
     }
+
+
+    /**
+     * @param $string
+     */
+    public function echo_red($string)
+    {
+        $cmd = "echo -ne \"\033[31m" . $string . " \033[0m\n\"";
+        $a   = exec($cmd);
+        print "$a" . PHP_EOL;
+    }
+
+
+    /**
+     * @param $string
+     */
+    public function echo_green($string)
+    {
+        $cmd = "printf \"\033[32m" . $string . "\033[0m\n\"";
+        $a   = exec($cmd);
+        print "$a" . PHP_EOL;
+    }
+
+
+    /**
+     * @param $string
+     */
+    public function echo_brown($string)
+    {
+        $cmd = "printf \"\033[33m" . $string . "\033[0m\n\"";
+        $a   = exec($cmd);
+        print "$a" . PHP_EOL;
+    }
+
+
+    /**
+     * @param $string
+     */
+    public function echo_blue($string)
+    {
+        $cmd = "printf \"\033[34m" . $string . "\033[0m\n\"";
+        $a   = exec($cmd);
+        print "$a" . PHP_EOL;
+    }
+
+
+    /**
+     * @param $string
+     */
+    public function echo_purple($string)
+    {
+        $cmd = "printf \"\033[35m" . $string . "\033[0m\n\"";
+        $a   = exec($cmd);
+        print "$a" . PHP_EOL;
+    }
+
+
+    /**
+     * @param $string
+     */
+    public function echo_cyan($string)
+    {
+        $cmd = "printf \"\033[35m" . $string . "\033[0m\n\"";
+        $a   = exec($cmd);
+        print "$a" . PHP_EOL;
+    }
+
 }
