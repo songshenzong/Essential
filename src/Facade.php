@@ -2,6 +2,11 @@
 
 namespace Songshenzong\Essentials;
 
+/**
+ * Class Facade
+ *
+ * @package Songshenzong\Essentials
+ */
 class Facade extends \Illuminate\Support\Facades\Facade
 {
     /**

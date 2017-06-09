@@ -2,6 +2,11 @@
 
 namespace Songshenzong\Essentials;
 
+/**
+ * Class ServiceProvider
+ *
+ * @package Songshenzong\Essentials
+ */
 class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     /**
@@ -19,10 +24,10 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        $this -> app -> singleton('Essentials', function ($app) {
+        $this->app->singleton('Essentials', function ($app) {
             return new Essentials($app);
         });
 
-        $this -> app -> alias('Essentials', 'Songshenzong\Essentials\Facade');
+        $this->app->alias('Essentials', Facade::class);
     }
 }

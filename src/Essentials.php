@@ -2,6 +2,11 @@
 
 namespace Songshenzong\Essentials;
 
+/**
+ * Class Essentials
+ *
+ * @package Songshenzong\Essentials
+ */
 class Essentials
 {
 
@@ -14,11 +19,7 @@ class Essentials
      */
     public function isSetAndNotEmpty($value)
     {
-        if (isset($value) && !empty($value)) {
-            return true;
-        }
-
-        return false;
+        return isset($value) && !empty($value);
     }
 
     /**
@@ -30,10 +31,7 @@ class Essentials
      */
     public function isSetAndNotEmptyAndNotNull($value)
     {
-        if (isset($value) && !empty($value) && $value != 'null') {
-            return true;
-        }
-        return false;
+        return isset($value) && !empty($value) && $value !== 'null';
     }
 
     /**
@@ -95,7 +93,7 @@ class Essentials
     public function formatTime($time)
     {
         $time  = strtotime($time);
-        $rtime = date("m-d H:i", $time);
+        $rtime = date('m-d H:i', $time);
         $time  = time() - $time;
         if ($time < 60) {
             $str = '刚刚';
@@ -107,7 +105,7 @@ class Essentials
             $str = $h . '小时前';
         } else if ($time < 60 * 60 * 24 * 3) {
             $d = floor($time / (60 * 60 * 24));
-            if ($d == 1) {
+            if ($d === 1) {
                 $str = '昨天 ' . $rtime;
             } else {
                 $str = '前天 ' . $rtime;
