@@ -13,7 +13,7 @@ if (!function_exists('essentials')) {
 }
 
 
-if (!function_exists('echo_red')) {
+if (!function_exists('echoRed')) {
     /**
      * Get the instance
      *
@@ -23,14 +23,14 @@ if (!function_exists('echo_red')) {
      *
      * @return mixed
      */
-    function echo_red($string)
+    function echoRed($string)
     {
-        return app('Essentials')->echo_red($string);
+        return app('Essentials')->echoRed($string);
     }
 }
 
 
-if (!function_exists('echo_green')) {
+if (!function_exists('echoGreen')) {
     /**
      * Get the instance
      *
@@ -40,14 +40,14 @@ if (!function_exists('echo_green')) {
      *
      * @return mixed
      */
-    function echo_green($string)
+    function echoGreen($string)
     {
-        return app('Essentials')->echo_green($string);
+        return app('Essentials')->echoGreen($string);
     }
 }
 
 
-if (!function_exists('echo_brown')) {
+if (!function_exists('echoBrown')) {
     /**
      * Get the instance
      *
@@ -57,14 +57,14 @@ if (!function_exists('echo_brown')) {
      *
      * @return mixed
      */
-    function echo_brown($string)
+    function echoBrown($string)
     {
-        return app('Essentials')->echo_brown($string);
+        return app('Essentials')->echoBrown($string);
     }
 }
 
 
-if (!function_exists('echo_blue')) {
+if (!function_exists('echoBlue')) {
     /**
      * Get the instance
      *
@@ -74,13 +74,13 @@ if (!function_exists('echo_blue')) {
      *
      * @return mixed
      */
-    function echo_blue($string)
+    function echoBlue($string)
     {
-        return app('Essentials')->echo_blue($string);
+        return app('Essentials')->echoBlue($string);
     }
 }
 
-if (!function_exists('echo_purple')) {
+if (!function_exists('echoPurple')) {
     /**
      * Get the instance
      *
@@ -90,14 +90,14 @@ if (!function_exists('echo_purple')) {
      *
      * @return mixed
      */
-    function echo_purple($string)
+    function echoPurple($string)
     {
-        return app('Essentials')->echo_purple($string);
+        return app('Essentials')->echoPurple($string);
     }
 }
 
 
-if (!function_exists('echo_cyan')) {
+if (!function_exists('echoCyan')) {
     /**
      * Get the instance
      *
@@ -107,8 +107,8 @@ if (!function_exists('echo_cyan')) {
      *
      * @return mixed
      */
-    function echo_cyan($string)
+    function echoCyan($string)
     {
-        return app('Essentials')->echo_cyan($string);
+        return app('Essentials')->echoCyan($string);
     }
 }

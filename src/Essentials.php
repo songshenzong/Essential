@@ -120,7 +120,7 @@ class Essentials
     /**
      * @param $string
      */
-    public function echo_red($string)
+    public function echoRed($string)
     {
         $cmd = "echo -ne \"\033[31m" . $string . " \033[0m\n\"";
         $a   = exec($cmd);
@@ -131,7 +131,7 @@ class Essentials
     /**
      * @param $string
      */
-    public function echo_green($string)
+    public function echoGreen($string)
     {
         $cmd = "printf \"\033[32m" . $string . "\033[0m\n\"";
         $a   = exec($cmd);
@@ -142,7 +142,7 @@ class Essentials
     /**
      * @param $string
      */
-    public function echo_brown($string)
+    public function echoBrown($string)
     {
         $cmd = "printf \"\033[33m" . $string . "\033[0m\n\"";
         $a   = exec($cmd);
@@ -153,7 +153,7 @@ class Essentials
     /**
      * @param $string
      */
-    public function echo_blue($string)
+    public function echoBlue($string)
     {
         $cmd = "printf \"\033[34m" . $string . "\033[0m\n\"";
         $a   = exec($cmd);
@@ -164,7 +164,7 @@ class Essentials
     /**
      * @param $string
      */
-    public function echo_purple($string)
+    public function echoPurple($string)
     {
         $cmd = "printf \"\033[35m" . $string . "\033[0m\n\"";
         $a   = exec($cmd);
@@ -175,7 +175,7 @@ class Essentials
     /**
      * @param $string
      */
-    public function echo_cyan($string)
+    public function echoCyan($string)
     {
         $cmd = "printf \"\033[35m" . $string . "\033[0m\n\"";
         $a   = exec($cmd);
