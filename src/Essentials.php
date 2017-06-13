@@ -2,6 +2,8 @@
 
 namespace Songshenzong\Essentials;
 
+use function strtotime;
+
 /**
  * Class Essentials
  *
@@ -86,33 +88,29 @@ class Essentials
     /**
      * Format Time.
      *
-     * @param $time
+     * @param $ustime
      *
      * @return false|string
      */
-    public function formatTime($time)
+    public function formatTime($ustime)
     {
-        $time  = strtotime($time);
-        $rtime = date('m-d H:i', $time);
-        $time  = time() - $time;
+        $time  = time() - strtotime($ustime);
+        $time1 = time() - strtotime('today');
         if ($time < 60) {
             $str = '刚刚';
         } else if ($time < 60 * 60) {
             $min = floor($time / 60);
             $str = $min . '分钟前';
-        } else if ($time < 60 * 60 * 24) {
-            $h   = floor($time / (60 * 60));
-            $str = $h . '小时前';
-        } else if ($time < 60 * 60 * 24 * 3) {
-            $d = floor($time / (60 * 60 * 24));
-            if ($d === 1) {
-                $str = '昨天 ' . $rtime;
-            } else {
-                $str = '前天 ' . $rtime;
-            }
+        } else if ($time < 24 * 3600) {
+            $min = floor($time / (60 * 60));
+            $str = $min . '小时前';
+        } else if ($time > $time1 && $time < 7 * 24 * 60 * 60) {
+            $min = floor($time / (60 * 60 * 24));
+            $str = $min . '天前';
         } else {
-            $str = $rtime;
+            $str = date('n月j日 H:i', $ustime);
         }
+
         return $str;
     }
 
