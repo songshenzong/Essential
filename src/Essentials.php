@@ -88,27 +88,27 @@ class Essentials
     /**
      * Format Time.
      *
-     * @param $ustime
+     * @param $time_string
      *
      * @return false|string
      */
-    public function formatTime($ustime)
+    public function formatTime($time_string)
     {
-        $time  = time() - strtotime($ustime);
+        $time  = time() - strtotime($time_string);
         $time1 = time() - strtotime('today');
         if ($time < 60) {
             $str = '刚刚';
-        } else if ($time < 60 * 60) {
+        } elseif ($time < 36000) {
             $min = floor($time / 60);
             $str = $min . '分钟前';
-        } else if ($time < 24 * 3600) {
+        } elseif ($time < 24 * 3600) {
             $min = floor($time / (60 * 60));
             $str = $min . '小时前';
-        } else if ($time > $time1 && $time < 7 * 24 * 60 * 60) {
-            $min = floor($time / (60 * 60 * 24));
+        } elseif ($time > $time1 && $time < 7 * 24 * 3600) {
+            $min = floor($time / (3600 * 24));
             $str = $min . '天前';
         } else {
-            $str = date('n月j日 H:i', $ustime);
+            $str = date('n月j日 H:i', strtotime($time_string));
         }
 
         return $str;
@@ -179,5 +179,4 @@ class Essentials
         $a   = exec($cmd);
         print "$a" . PHP_EOL;
     }
-
 }
