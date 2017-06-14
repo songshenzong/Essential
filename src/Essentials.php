@@ -248,4 +248,25 @@ class Essentials
         $str = str_replace($filter, '', $str);
         return trim($str);
     }
+
+
+    /**
+     * @param $str
+     *
+     * @return string
+     */
+    public function stringTrim($str)
+    {
+        $filter = [
+            "\0",
+            "\n",
+            "\t",
+            "\x0B",
+            "\r",
+            ' ',
+        ];
+
+        $str = str_replace($filter, '', $str);
+        return trim($str);
+    }
 }
