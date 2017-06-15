@@ -17,7 +17,7 @@ trait Time
         $time1 = time() - strtotime('today');
         if ($time < 60) {
             $str = '刚刚';
-        } elseif ($time < 36000) {
+        } elseif ($time < 3600) {
             $min = floor($time / 60);
             $str = $min . '分钟前';
         } elseif ($time < 24 * 3600) {
