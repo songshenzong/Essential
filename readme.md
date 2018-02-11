@@ -1,4 +1,11 @@
-# Essentials
+[![Songshenzong](https://songshenzong.com/images/logo.png)](https://songshenzong.com)
+
+[![Total Downloads](https://poser.pugx.org/songshenzong/essentials/d/total.svg)](https://packagist.org/packages/songshenzong/essentials)
+[![Latest Stable Version](https://poser.pugx.org/songshenzong/essentials/v/stable.svg)](https://packagist.org/packages/songshenzong/essentials)
+[![License](https://poser.pugx.org/songshenzong/essentials/license.svg)](https://packagist.org/packages/songshenzong/essentials)
+[![PHP Version](https://img.shields.io/packagist/php-v/songshenzong/essentials.svg)](https://packagist.org/packages/songshenzong/essentials)
+
+## About
 
 Essentials Methods for Laravel
 
@@ -12,7 +19,7 @@ composer require songshenzong/essentials
 
 
 
-## Laravel 5.x
+## Before Laravel 5.x
 
 After updating composer, add the ServiceProvider to the providers array in `config/app.php`
 
