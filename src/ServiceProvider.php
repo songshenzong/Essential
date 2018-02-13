@@ -24,8 +24,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('Essentials', function ($app) {
-            return new Essentials($app);
+        $this->app->singleton('Essentials', function () {
+            return new Essentials();
         });
 
         $this->app->alias('Essentials', Facade::class);
