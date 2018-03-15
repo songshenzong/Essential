@@ -118,7 +118,7 @@ trait Str
      *
      * @return string
      */
-    public static function stringFilter(string $string): string
+    public static function filter(string $string): string
     {
         $filter = [
             "\n",
@@ -233,6 +233,25 @@ trait Str
      *
      * @return bool
      */
+    public static function isJson(string $string = ''): bool
+    {
+        if ($string === '') {
+            return false;
+        }
+
+        \json_decode($string);
+        if (\json_last_error()) {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * @param string $string
+     *
+     * @return bool
+     */
     public static function isXml(string $string = ''): bool
     {
         if ($string === '') {
@@ -270,23 +289,4 @@ trait Str
         return simplexml_load_string($string);
     }
 
-
-    /**
-     * @param string $string
-     *
-     * @return bool
-     */
-    public static function isJson(string $string = ''): bool
-    {
-        if ($string === '') {
-            return false;
-        }
-
-        \json_decode($string);
-        if (\json_last_error()) {
-            return false;
-        }
-
-        return true;
-    }
 }
