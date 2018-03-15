@@ -8,7 +8,7 @@ if (!function_exists('echoRed')) {
      */
     function echoRed($string)
     {
-        return (new BashEcho)->echoRed($string);
+        BashEcho::echoRed($string);
     }
 }
 
@@ -19,7 +19,7 @@ if (!function_exists('echoGreen')) {
      */
     function echoGreen($string)
     {
-        return (new BashEcho)->echoGreen($string);
+        BashEcho::echoGreen($string);
     }
 }
 
@@ -30,7 +30,7 @@ if (!function_exists('echoBrown')) {
      */
     function echoBrown($string)
     {
-        return (new BashEcho)->echoBrown($string);
+        BashEcho::echoBrown($string);
     }
 }
 
@@ -42,7 +42,7 @@ if (!function_exists('echoBlue')) {
      */
     function echoBlue($string)
     {
-        return (new BashEcho)->echoBlue($string);
+        BashEcho::echoBlue($string);
     }
 }
 
@@ -52,7 +52,7 @@ if (!function_exists('echoPurple')) {
      */
     function echoPurple($string)
     {
-        return (new BashEcho)->echoPurple($string);
+        BashEcho::echoPurple($string);
     }
 }
 
@@ -63,6 +63,6 @@ if (!function_exists('echoCyan')) {
      */
     function echoCyan($string)
     {
-        return (new BashEcho)->echoCyan($string);
+        BashEcho::echoCyan($string);
     }
 }

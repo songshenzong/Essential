@@ -2,8 +2,9 @@
 
 namespace Songshenzong\Support;
 
+
 /**
- * Class ServiceProvider
+ * Class StringsServiceProvider
  *
  * @package Songshenzong\Support
  */

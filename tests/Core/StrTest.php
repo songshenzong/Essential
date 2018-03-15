@@ -1,12 +1,16 @@
 <?php
 
-namespace Songshenzong\Support\Test\Str;
+namespace Songshenzong\Support\Test\Core;
 
 use PHPUnit\Framework\TestCase;
 use Songshenzong\Support\Strings;
 use stdClass;
 
-
+/**
+ * Class StrTest
+ *
+ * @package Songshenzong\Support\Test\Core
+ */
 class StrTest extends TestCase
 {
     /**

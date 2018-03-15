@@ -2,6 +2,11 @@
 
 namespace Songshenzong\Support\Traits;
 
+/**
+ * Trait Time
+ *
+ * @package Songshenzong\Support\Traits
+ */
 trait Time
 {
 

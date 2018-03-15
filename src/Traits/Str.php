@@ -5,9 +5,13 @@ namespace Songshenzong\Support\Traits;
 use SimpleXMLElement;
 use stdClass;
 
+/**
+ * Trait Str
+ *
+ * @package Songshenzong\Support\Traits
+ */
 trait Str
 {
-
 
     /**
      * @param string $string

@@ -3,7 +3,7 @@
 namespace Songshenzong\Support;
 
 /**
- * Class Facade
+ * Class StringsFacade
  *
  * @package Songshenzong\Support
  */
