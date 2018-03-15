@@ -1,6 +1,6 @@
 <?php
 
-namespace Songshenzong\Essentials\Traits;
+namespace Songshenzong\Support\Traits;
 
 trait Str
 {

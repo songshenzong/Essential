@@ -1,26 +1,26 @@
 [![Songshenzong](https://cdn.songshenzong.com/images/logo.png)](https://songshenzong.com)
 
-[![Total Downloads](https://poser.pugx.org/songshenzong/essentials/d/total.svg)](https://packagist.org/packages/songshenzong/essentials)
-[![Latest Stable Version](https://poser.pugx.org/songshenzong/essentials/v/stable.svg)](https://packagist.org/packages/songshenzong/essentials)
-[![License](https://poser.pugx.org/songshenzong/essentials/license.svg)](https://packagist.org/packages/songshenzong/essentials)
-[![PHP Version](https://img.shields.io/packagist/php-v/songshenzong/essentials.svg)](https://packagist.org/packages/songshenzong/essentials)
+[![Total Downloads](https://poser.pugx.org/songshenzong/support/d/total.svg)](https://packagist.org/packages/songshenzong/support)
+[![Latest Stable Version](https://poser.pugx.org/songshenzong/support/v/stable.svg)](https://packagist.org/packages/songshenzong/support)
+[![License](https://poser.pugx.org/songshenzong/support/license.svg)](https://packagist.org/packages/songshenzong/support)
+[![PHP Version](https://img.shields.io/packagist/php-v/songshenzong/support.svg)](https://packagist.org/packages/songshenzong/support)
 
 ## About
 
-Essentials Methods for Laravel
+Support Methods for Laravel
 
 ## Installation
 
 Require this package with composer:
 
 ```shell
-composer require songshenzong/essentials
+composer require songshenzong/support
 ```
 
 
 ## Documentation
 
-Please refer to our extensive [Wiki documentation](https://github.com/songshenzong/essentials/wiki) for more information.
+Please refer to our extensive [Wiki documentation](https://github.com/songshenzong/support/wiki) for more information.
 
 
 ## Support

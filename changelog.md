@@ -1,4 +1,4 @@
-# Songzhenzong Essentials ChangeLog
+# Songzhenzong Support ChangeLog
 
 ---
 

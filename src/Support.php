@@ -1,17 +1,17 @@
 <?php
 
-namespace Songshenzong\Essentials;
+namespace Songshenzong\Support;
 
-use Songshenzong\Essentials\Traits\BashEcho;
-use Songshenzong\Essentials\Traits\Str;
-use Songshenzong\Essentials\Traits\Time;
+use Songshenzong\Support\Traits\BashEcho;
+use Songshenzong\Support\Traits\Str;
+use Songshenzong\Support\Traits\Time;
 
 /**
- * Class Essentials
+ * Class Support
  *
- * @package Songshenzong\Essentials
+ * @package Songshenzong\Support
  */
-class Essentials
+class Support
 {
     use Str;
     use BashEcho;
@@ -24,7 +24,7 @@ class Essentials
      * @param $filename
      * @param $data
      */
-    public function excel($filename, $data)
+    public function excel($filename, $data): void
     {
         \Excel::create($filename, function ($excel) use ($filename, $data) {
             $excel->sheet($filename, function ($sheet) use ($data) {

@@ -1,14 +1,14 @@
 <?php
 
-if (!function_exists('essentials')) {
+if (!function_exists('support')) {
     /**
      * Get the instance
      *
-     * @return \Songshenzong\Essentials\Essentials
+     * @return \Songshenzong\Support\Support
      */
-    function essentials()
+    function support()
     {
-        return app('Essentials');
+        return app('Support');
     }
 }
 
@@ -17,7 +17,7 @@ if (!function_exists('echoRed')) {
     /**
      * Get the instance
      *
-     * @return \Songshenzong\Essentials\Essentials
+     * @return \Songshenzong\Support\Support
      *
      * @param $string
      *
@@ -25,7 +25,7 @@ if (!function_exists('echoRed')) {
      */
     function echoRed($string)
     {
-        return app('Essentials')->echoRed($string);
+        return app('Support')->echoRed($string);
     }
 }
 
@@ -34,7 +34,7 @@ if (!function_exists('echoGreen')) {
     /**
      * Get the instance
      *
-     * @return \Songshenzong\Essentials\Essentials
+     * @return \Songshenzong\Support\Support
      *
      * @param $string
      *
@@ -42,7 +42,7 @@ if (!function_exists('echoGreen')) {
      */
     function echoGreen($string)
     {
-        return app('Essentials')->echoGreen($string);
+        return app('Support')->echoGreen($string);
     }
 }
 
@@ -51,7 +51,7 @@ if (!function_exists('echoBrown')) {
     /**
      * Get the instance
      *
-     * @return \Songshenzong\Essentials\Essentials
+     * @return \Songshenzong\Support\Support
      *
      * @param $string
      *
@@ -59,7 +59,7 @@ if (!function_exists('echoBrown')) {
      */
     function echoBrown($string)
     {
-        return app('Essentials')->echoBrown($string);
+        return app('Support')->echoBrown($string);
     }
 }
 
@@ -68,7 +68,7 @@ if (!function_exists('echoBlue')) {
     /**
      * Get the instance
      *
-     * @return \Songshenzong\Essentials\Essentials
+     * @return \Songshenzong\Support\Support
      *
      * @param $string
      *
@@ -76,7 +76,7 @@ if (!function_exists('echoBlue')) {
      */
     function echoBlue($string)
     {
-        return app('Essentials')->echoBlue($string);
+        return app('Support')->echoBlue($string);
     }
 }
 
@@ -84,7 +84,7 @@ if (!function_exists('echoPurple')) {
     /**
      * Get the instance
      *
-     * @return \Songshenzong\Essentials\Essentials
+     * @return \Songshenzong\Support\Support
      *
      * @param $string
      *
@@ -92,7 +92,7 @@ if (!function_exists('echoPurple')) {
      */
     function echoPurple($string)
     {
-        return app('Essentials')->echoPurple($string);
+        return app('Support')->echoPurple($string);
     }
 }
 
@@ -101,7 +101,7 @@ if (!function_exists('echoCyan')) {
     /**
      * Get the instance
      *
-     * @return \Songshenzong\Essentials\Essentials
+     * @return \Songshenzong\Support\Support
      *
      * @param $string
      *
@@ -109,6 +109,6 @@ if (!function_exists('echoCyan')) {
      */
     function echoCyan($string)
     {
-        return app('Essentials')->echoCyan($string);
+        return app('Support')->echoCyan($string);
     }
 }

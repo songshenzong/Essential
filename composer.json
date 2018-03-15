@@ -1,6 +1,6 @@
 {
-  "name": "songshenzong/essentials",
-  "description": "Essentials Methods for Laravel",
+  "name": "songshenzong/support",
+  "description": "Support Methods for Laravel",
   "keywords": [
     "laravel",
     "response",
@@ -9,8 +9,8 @@
   "license": "MIT",
   "homepage": "http://songshenzong.com",
   "support": {
-    "issues": "https://github.com/songshenzong/essentials/issues",
-    "source": "https://github.com/songshenzong/essentials"
+    "issues": "https://github.com/songshenzong/support/issues",
+    "source": "https://github.com/songshenzong/support"
   },
   "authors": [
     {
@@ -23,11 +23,11 @@
   },
   "require-dev": {
     "phpunit/phpunit": "~7.0",
-    "laravel/framework": "5.5.*"
+    "laravel/framework": "5.6.*"
   },
   "autoload": {
     "psr-4": {
-      "Songshenzong\\Essentials\\": "src/"
+      "Songshenzong\\Support\\": "src/"
     },
     "files": [
       "src/Helpers.php"
@@ -36,10 +36,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Songshenzong\\Essentials\\ServiceProvider"
+        "Songshenzong\\Support\\ServiceProvider"
       ],
       "aliases": {
-        "SongshenzongApi": "Songshenzong\\Essentials\\Facade"
+        "SongshenzongApi": "Songshenzong\\Support\\Facade"
       }
     }
   }

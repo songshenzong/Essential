@@ -1,11 +1,11 @@
 <?php
 
-namespace Songshenzong\Essentials;
+namespace Songshenzong\Support;
 
 /**
  * Class Facade
  *
- * @package Songshenzong\Essentials
+ * @package Songshenzong\Support
  */
 class Facade extends \Illuminate\Support\Facades\Facade
 {
@@ -14,6 +14,6 @@ class Facade extends \Illuminate\Support\Facades\Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'Essentials';
+        return 'Support';
     }
 }
