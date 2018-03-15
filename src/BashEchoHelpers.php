@@ -1,17 +1,5 @@
 <?php
 
-if (!function_exists('support')) {
-    /**
-     * Get the instance
-     *
-     * @return \Songshenzong\Support\Support
-     */
-    function support()
-    {
-        return app('Support');
-    }
-}
-
 
 if (!function_exists('echoRed')) {
     /**

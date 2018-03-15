@@ -31,16 +31,17 @@
       "Songshenzong\\Support\\Test\\": "tests/"
     },
     "files": [
-      "src/Helpers.php"
+      "src/StringsHelpers.php",
+      "src/BashEchoHelpers.php"
     ]
   },
   "extra": {
     "laravel": {
       "providers": [
-        "Songshenzong\\Support\\ServiceProvider"
+        "Songshenzong\\Support\\StringsServiceProvider"
       ],
       "aliases": {
-        "SongshenzongApi": "Songshenzong\\Support\\Facade"
+        "Strings": "Songshenzong\\Support\\StringsFacade"
       }
     }
   }

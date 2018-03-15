@@ -7,7 +7,7 @@ namespace Songshenzong\Support;
  *
  * @package Songshenzong\Support
  */
-class ServiceProvider extends \Illuminate\Support\ServiceProvider
+class StringsServiceProvider extends \Illuminate\Support\ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
@@ -24,10 +24,10 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register(): void
     {
-        $this->app->singleton('Support', function () {
-            return new Support();
+        $this->app->singleton('Strings', function () {
+            return new Strings();
         });
 
-        $this->app->alias('Support', Facade::class);
+        $this->app->alias('Strings', StringsFacade::class);
     }
 }

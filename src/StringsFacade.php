@@ -7,13 +7,13 @@ namespace Songshenzong\Support;
  *
  * @package Songshenzong\Support
  */
-class Facade extends \Illuminate\Support\Facades\Facade
+class StringsFacade extends \Illuminate\Support\Facades\Facade
 {
     /**
      * @return string
      */
     protected static function getFacadeAccessor()
     {
-        return 'Support';
+        return 'Strings';
     }
 }
