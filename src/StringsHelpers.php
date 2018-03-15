@@ -1,13 +1,13 @@
 <?php
 
+use Songshenzong\Support\Strings;
+
 if (!function_exists('strings')) {
     /**
-     * Get the instance
-     *
-     * @return \Songshenzong\Support\Strings
+     * @return Strings
      */
-    function support()
+    function strings()
     {
-        return app('Strings');
+        return new Strings;
     }
 }
