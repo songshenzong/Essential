@@ -1,8 +1,7 @@
 <?php
 
-namespace Songshenzong\Support\Str;
+namespace Songshenzong\Support\Test\Str;
 
-use function echoBlue;
 use PHPUnit\Framework\TestCase;
 use Songshenzong\Support\Strings;
 use stdClass;
