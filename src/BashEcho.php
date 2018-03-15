@@ -1,8 +1,8 @@
 <?php
 
-namespace Songshenzong\Support\Traits;
+namespace Songshenzong\Support;
 
-trait BashEcho
+class BashEcho
 {
     /**
      * @param $string
@@ -14,6 +14,15 @@ trait BashEcho
         print (string) $a . PHP_EOL;
     }
 
+    /**
+     * @param $string
+     */
+    public function echoCyan($string): void
+    {
+        $cmd = "printf \"\033[35m" . $string . "\033[0m\n\"";
+        $a   = exec($cmd);
+        print (string) $a . PHP_EOL;
+    }
 
     /**
      * @param $string
@@ -59,13 +68,4 @@ trait BashEcho
     }
 
 
-    /**
-     * @param $string
-     */
-    public function echoCyan($string): void
-    {
-        $cmd = "printf \"\033[35m" . $string . "\033[0m\n\"";
-        $a   = exec($cmd);
-        print (string) $a . PHP_EOL;
-    }
 }

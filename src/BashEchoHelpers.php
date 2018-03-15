@@ -1,102 +1,68 @@
 <?php
 
+use Songshenzong\Support\BashEcho;
 
 if (!function_exists('echoRed')) {
     /**
-     * Get the instance
-     *
-     * @return \Songshenzong\Support\Support
-     *
      * @param $string
-     *
-     * @return mixed
      */
     function echoRed($string)
     {
-        return app('Support')->echoRed($string);
+        return (new BashEcho)->echoRed($string);
     }
 }
 
 
 if (!function_exists('echoGreen')) {
     /**
-     * Get the instance
-     *
-     * @return \Songshenzong\Support\Support
-     *
      * @param $string
-     *
-     * @return mixed
      */
     function echoGreen($string)
     {
-        return app('Support')->echoGreen($string);
+        return (new BashEcho)->echoGreen($string);
     }
 }
 
 
 if (!function_exists('echoBrown')) {
     /**
-     * Get the instance
-     *
-     * @return \Songshenzong\Support\Support
-     *
      * @param $string
-     *
-     * @return mixed
      */
     function echoBrown($string)
     {
-        return app('Support')->echoBrown($string);
+        return (new BashEcho)->echoBrown($string);
     }
 }
 
 
 if (!function_exists('echoBlue')) {
+
     /**
-     * Get the instance
-     *
-     * @return \Songshenzong\Support\Support
-     *
      * @param $string
-     *
-     * @return mixed
      */
     function echoBlue($string)
     {
-        return app('Support')->echoBlue($string);
+        return (new BashEcho)->echoBlue($string);
     }
 }
 
 if (!function_exists('echoPurple')) {
     /**
-     * Get the instance
-     *
-     * @return \Songshenzong\Support\Support
-     *
      * @param $string
-     *
-     * @return mixed
      */
     function echoPurple($string)
     {
-        return app('Support')->echoPurple($string);
+        return (new BashEcho)->echoPurple($string);
     }
 }
 
 
 if (!function_exists('echoCyan')) {
     /**
-     * Get the instance
-     *
-     * @return \Songshenzong\Support\Support
-     *
      * @param $string
-     *
-     * @return mixed
      */
     function echoCyan($string)
     {
-        return app('Support')->echoCyan($string);
+        return (new BashEcho)->echoCyan($string);
     }
 }
