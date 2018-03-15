@@ -2,8 +2,10 @@
 
 namespace Songshenzong\Support\Str;
 
+use function echoBlue;
 use PHPUnit\Framework\TestCase;
 use Songshenzong\Support\Strings;
+use stdClass;
 
 
 class StrTest extends TestCase
@@ -32,6 +34,17 @@ ETO;
      */
     protected $jsonString = '{ "tools": [ { "name":"css format" , "site":"https://songshenzong.com" }, { "name":"pwd check" , "site":"https://songshenzong.com" } ] }';
 
+
+    /**
+     * @var array
+     */
+    protected $simpleJsonArray = ['json' => true];
+
+    /**
+     * @var string
+     */
+    protected $simpleJsonString = '{"json":true}';
+
     /**
      * @throws \PHPUnit\Framework\ExpectationFailedException
      * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
@@ -41,7 +54,7 @@ ETO;
         $this->assertEquals(false, Strings::isJson());
         $this->assertEquals(false, Strings::isJson(''));
         $this->assertEquals(false, Strings::isJson($this->xmlString));
-        $this->assertEquals(true, Strings::isJson('{"json":true}'));
+        $this->assertEquals(true, Strings::isJson($this->simpleJsonString));
         $this->assertEquals(true, Strings::isJson($this->jsonString));
     }
 
@@ -56,7 +69,40 @@ ETO;
         $this->assertEquals(false, Strings::isXml());
         $this->assertEquals(false, Strings::isXml($this->jsonString));
         $this->assertEquals(true, Strings::isXml($this->xmlString));
-        $this->assertEquals(false, Strings::isXml('{"json":true}'));
+        $this->assertEquals(false, Strings::isXml($this->simpleJsonString));
+    }
+
+    /**
+     * @throws \PHPUnit\Framework\ExpectationFailedException
+     * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+     */
+    public function testToArray(): void
+    {
+        $this->assertEquals($this->simpleJsonArray, Strings::toArray($this->simpleJsonString));
+        $this->assertEquals([], Strings::toArray());
+        $this->assertEquals([], Strings::toArray(''));
+    }
+
+    /**
+     * @throws \PHPUnit\Framework\ExpectationFailedException
+     * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+     */
+    public function testToObject(): void
+    {
+        $this->assertEquals(true, Strings::toObject($this->simpleJsonString)->json);
+        $this->assertObjectHasAttribute('book', Strings::toObject($this->xmlString));
+        $this->assertEquals(new stdClass(), Strings::toObject());
+        $this->assertEquals(new stdClass(), Strings::toObject(''));
+    }
+
+    /**
+     * @throws \PHPUnit\Framework\ExpectationFailedException
+     * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
+     */
+    public function testXmlToArray(): void
+    {
+        $this->assertArrayHasKey('book', Strings::xmlToArray($this->xmlString));
+        $this->assertObjectHasAttribute('book', Strings::xmlToObject($this->xmlString));
     }
 
 
