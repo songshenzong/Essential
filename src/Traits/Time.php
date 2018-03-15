@@ -4,14 +4,15 @@ namespace Songshenzong\Support\Traits;
 
 trait Time
 {
+
     /**
      * Format Time.
      *
-     * @param $time_string
+     * @param string $time_string
      *
      * @return false|string
      */
-    public function formatTime($time_string)
+    public function formatTime(string $time_string)
     {
         $time  = time() - strtotime($time_string);
         $time1 = time() - strtotime('today');

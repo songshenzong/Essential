@@ -9,7 +9,7 @@ trait Str
      *
      * @return string
      */
-    public function stringFilter($str)
+    public function stringFilter($str): string
     {
         $filter = [
             "\n",
@@ -78,7 +78,7 @@ trait Str
      *
      * @return string
      */
-    public function stringTrim($str)
+    public function stringTrim($str): string
     {
         $filter = [
             "\0",
@@ -101,7 +101,7 @@ trait Str
      *
      * @return bool
      */
-    public function isSetAndNotEmpty($value)
+    public function isSetAndNotEmpty($value): bool
     {
         return isset($value) && !empty($value);
     }
@@ -113,7 +113,7 @@ trait Str
      *
      * @return bool
      */
-    public function isSetAndNotEmptyAndNotNull($value)
+    public function isSetAndNotEmptyAndNotNull($value): bool
     {
         return isset($value) && !empty($value) && $value !== 'null';
     }
