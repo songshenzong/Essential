@@ -1,6 +1,6 @@
 {
   "name": "songshenzong/support",
-  "description": "Support Methods for Laravel",
+  "description": "The Songshenzong Support package.",
   "keywords": [
     "laravel",
     "response",

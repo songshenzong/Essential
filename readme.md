@@ -7,7 +7,7 @@
 
 ## About
 
-Support Methods for Laravel
+The Songshenzong Support package.
 
 ## Installation
 
