@@ -2,8 +2,8 @@
   "name": "songshenzong/support",
   "description": "The Songshenzong Support package.",
   "keywords": [
+    "support",
     "laravel",
-    "response",
     "web"
   ],
   "license": "MIT",
