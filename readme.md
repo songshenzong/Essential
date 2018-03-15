@@ -14,7 +14,6 @@ Require this package with composer:
 composer require songshenzong/support
 ```
 
-
 ## Documentation
 
 Please refer to our extensive [Wiki documentation](https://github.com/songshenzong/support/wiki) for more information.
