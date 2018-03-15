@@ -3,10 +3,98 @@
 namespace Songshenzong\Support\Traits;
 
 use SimpleXMLElement;
+use stdClass;
 
 trait Str
 {
 
+
+    /**
+     * @param string $string
+     *
+     * @return array
+     */
+    public static function toArray(string $string = ''): array
+    {
+        if ($string === '') {
+            return [];
+        }
+
+        if (self::isJson($string)) {
+            return json_decode($string, true);
+        }
+
+        if (self::isXml($string)) {
+            return self::xmlToArray($string);
+        }
+
+        $unserialize = self::unserialize($string);
+        if ($unserialize === false) {
+            return [];
+        }
+
+        if (\is_array($unserialize)) {
+            return $unserialize;
+        }
+
+        return [];
+
+    }
+
+    /**
+     * @return stdClass|SimpleXMLElement
+     *
+     * @param string $string
+     *
+     */
+    public static function toObject(string $string = ''): object
+    {
+
+        if ($string === '') {
+            return new stdClass();
+        }
+
+
+        if (self::isJson($string)) {
+            return json_decode($string);
+        }
+
+
+        if (self::isXml($string)) {
+            return self::xmlToObject($string);
+        }
+
+        $unserialize = self::unserialize($string);
+        if ($unserialize === false) {
+            return new stdClass();
+        }
+
+        if (\is_object($unserialize)) {
+            return $unserialize;
+        }
+
+        return new stdClass();
+    }
+
+
+    /**
+     * @param string $serialized
+     *
+     * @return mixed
+     */
+    public static function unserialize(string $serialized)
+    {
+        // Set Handle
+        set_error_handler(function () {
+        }, E_ALL);
+        $result = unserialize((string) $serialized);
+        // Restores the previous error handler function
+        restore_error_handler();
+        if ($result === false) {
+            return false;
+        }
+        return $result;
+    }
 
     /**
      * @param string $string
@@ -99,7 +187,7 @@ trait Str
      *
      * @return string
      */
-    public static function stringTrim(string $string): string
+    public static function trim(string $string): string
     {
         $filter = [
             "\0",
@@ -145,8 +233,12 @@ trait Str
      *
      * @return bool
      */
-    public static function isXml(string $string): bool
+    public static function isXml(string $string = ''): bool
     {
+        if ($string === '') {
+            return false;
+        }
+
         $xml_parser = xml_parser_create();
         if (!xml_parse($xml_parser, $string, true)) {
             xml_parser_free($xml_parser);
@@ -184,7 +276,7 @@ trait Str
      *
      * @return bool
      */
-    public static function isJson(string $string): bool
+    public static function isJson(string $string = ''): bool
     {
         if ($string === '') {
             return false;
