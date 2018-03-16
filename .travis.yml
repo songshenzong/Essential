@@ -1,8 +1,10 @@
 language: php
+install: true
 
 php:
   - 7.2
   - nightly
+
 
 
 before_script:
@@ -11,3 +13,28 @@ before_script:
   - curl -sSfL -o ~/.phpenv/versions/hhvm/bin/phpunit https://phar.phpunit.de/phpunit-5.7.phar
 
 script: phpunit
+
+
+before_deploy:
+  - git config --global user.email "i@songshenzong.com"
+  - git config --global user.name "Songshenzong"
+  - export GIT_TAG=$TRAVIS_BRANCH-0.1.$TRAVIS_BUILD_NUMBER
+  - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
+  - git push -q https://$TAGPERM@github.com/songshenzong/support --tags
+  - ls -R
+
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: [redacted]
+  file:
+    - "README.md"
+    - "dist/support-0.1.0.zip"
+    - "dist/support-Test Output-0.1.0.zip"
+  on:
+     repo: songshenzong/support
+     tags: true
+env:
+  global:
+    secure: [redacted]
