@@ -23,4 +23,3 @@ deploy:
     repo: songshenzong/support
     tags: true
     all_branches: true
-
