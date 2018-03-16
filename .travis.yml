@@ -1,18 +1,19 @@
 language: php
 install: true
 php:
-- 7.2
-- nightly
+  - 7.2
+  - nightly
 before_script:
-- curl --version
-- composer install --no-interaction --prefer-source --dev
-- curl -sSfL -o ~/.phpenv/versions/hhvm/bin/phpunit https://phar.phpunit.de/phpunit-5.7.phar
+  - curl --version
+  - composer self-update
+  - composer install --no-interaction --prefer-source --dev
+  - curl -sSfL -o ~/.phpenv/versions/hhvm/bin/phpunit https://phar.phpunit.de/phpunit-5.7.phar
 script: phpunit
 before_deploy:
-- git config --local user.email "i@songshenzong.com"
-- git config --local user.name "Songshenzong"
-- export GIT_TAG=$TRAVIS_BRANCH-0.1.$TRAVIS_BUILD_NUMBER
-- git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
+  - git config --local user.email "i@songshenzong.com"
+  - git config --local user.name "Songshenzong"
+  - export GIT_TAG=$TRAVIS_BRANCH-0.1.$TRAVIS_BUILD_NUMBER
+  - git tag $GIT_TAG -a -m "Generated tag from TravisCI for build $TRAVIS_BUILD_NUMBER"
 deploy:
   provider: releases
   api_key:
