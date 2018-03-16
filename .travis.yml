@@ -2,7 +2,6 @@ language: php
 install: true
 php:
   - 7.2
-  - nightly
 before_script:
   - curl --version
   - composer self-update
@@ -23,4 +22,3 @@ deploy:
   on:
     repo: songshenzong/support
     tags: true
-    all_branches: true
