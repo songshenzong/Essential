@@ -35,6 +35,3 @@ deploy:
   on:
      repo: songshenzong/support
      tags: true
-env:
-  global:
-    secure: [redacted]
