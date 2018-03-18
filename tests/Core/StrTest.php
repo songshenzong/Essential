@@ -52,7 +52,7 @@ ETO;
      * @throws \PHPUnit\Framework\ExpectationFailedException
      * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
      */
-    public function testIsJson(): void
+    public function testIsJson()
     {
         $this->assertEquals(false, Strings::isJson());
         $this->assertEquals(false, Strings::isJson(''));
@@ -66,7 +66,7 @@ ETO;
      * @throws \PHPUnit\Framework\ExpectationFailedException
      * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
      */
-    public function testIsXml(): void
+    public function testIsXml()
     {
         $this->assertEquals(false, Strings::isXml(''));
         $this->assertEquals(false, Strings::isXml());
@@ -79,7 +79,7 @@ ETO;
      * @throws \PHPUnit\Framework\ExpectationFailedException
      * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
      */
-    public function testToArray(): void
+    public function testToArray()
     {
         $this->assertEquals($this->simpleJsonArray, Strings::toArray($this->simpleJsonString));
         $this->assertEquals([], Strings::toArray());
@@ -90,7 +90,7 @@ ETO;
      * @throws \PHPUnit\Framework\ExpectationFailedException
      * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
      */
-    public function testToObject(): void
+    public function testToObject()
     {
         $this->assertEquals(true, Strings::toObject($this->simpleJsonString)->json);
         $this->assertObjectHasAttribute('book', Strings::toObject($this->xmlString));
@@ -102,7 +102,7 @@ ETO;
      * @throws \PHPUnit\Framework\ExpectationFailedException
      * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
      */
-    public function testXmlToArray(): void
+    public function testXmlToArray()
     {
         $this->assertArrayHasKey('book', Strings::xmlToArray($this->xmlString));
         $this->assertObjectHasAttribute('book', Strings::xmlToObject($this->xmlString));

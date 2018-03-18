@@ -18,7 +18,7 @@ trait Str
      *
      * @return array
      */
-    public static function toArray(string $string = ''): array
+    public static function toArray($string = '')
     {
         if ($string === '') {
             return [];
@@ -51,7 +51,7 @@ trait Str
      * @param string $string
      *
      */
-    public static function toObject(string $string = ''): object
+    public static function toObject($string = '')
     {
 
         if ($string === '') {
@@ -86,7 +86,7 @@ trait Str
      *
      * @return mixed
      */
-    public static function unserialize(string $serialized)
+    public static function unserialize($serialized)
     {
         // Set Handle
         set_error_handler(function () {
@@ -105,7 +105,7 @@ trait Str
      *
      * @return bool
      */
-    public static function isSerialized(string $string): bool
+    public static function isSerialized($string)
     {
         // Set Handle
         set_error_handler(function () {
@@ -122,7 +122,7 @@ trait Str
      *
      * @return string
      */
-    public static function filter(string $string): string
+    public static function filter($string)
     {
         $filter = [
             "\n",
@@ -191,7 +191,7 @@ trait Str
      *
      * @return string
      */
-    public static function trim(string $string): string
+    public static function trim($string)
     {
         $filter = [
             "\0",
@@ -214,7 +214,7 @@ trait Str
      *
      * @return bool
      */
-    public static function isSetAndNotEmpty($value): bool
+    public static function isSetAndNotEmpty($value)
     {
         return isset($value) && !empty($value);
     }
@@ -226,7 +226,7 @@ trait Str
      *
      * @return bool
      */
-    public static function isSetAndNotEmptyAndNotNull($value): bool
+    public static function isSetAndNotEmptyAndNotNull($value)
     {
         return isset($value) && !empty($value) && $value !== 'null';
     }
@@ -237,7 +237,7 @@ trait Str
      *
      * @return bool
      */
-    public static function isJson(string $string = ''): bool
+    public static function isJson($string = '')
     {
         if ($string === '') {
             return false;
@@ -256,7 +256,7 @@ trait Str
      *
      * @return bool
      */
-    public static function isXml(string $string = ''): bool
+    public static function isXml($string = '')
     {
         if ($string === '') {
             return false;
@@ -277,7 +277,7 @@ trait Str
      *
      * @return array
      */
-    public static function xmlToArray(string $string): array
+    public static function xmlToArray($string)
     {
         return json_decode(json_encode(simplexml_load_string($string)), true);
     }
@@ -288,7 +288,7 @@ trait Str
      *
      * @return SimpleXMLElement
      */
-    public static function xmlToObject(string $string): SimpleXMLElement
+    public static function xmlToObject($string)
     {
         return simplexml_load_string($string);
     }

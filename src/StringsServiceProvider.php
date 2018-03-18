@@ -23,7 +23,7 @@ class StringsServiceProvider extends \Illuminate\Support\ServiceProvider
      *
      * @return void
      */
-    public function register(): void
+    public function register()
     {
         $this->app->singleton('Strings', function () {
             return new Strings();

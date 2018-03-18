@@ -17,7 +17,7 @@ class EchoBashTest extends TestCase
      * @throws \PHPUnit\Framework\ExpectationFailedException
      * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
      */
-    public function testIsJson(): void
+    public function testIsJson()
     {
         echoRed('echo Red');
         echoPurple('echo Purple');
