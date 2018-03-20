@@ -3,3 +3,4 @@
 /vendor/
 /support.iml
 build
+composer.lock

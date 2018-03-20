@@ -1,5 +1,3 @@
-[![Songshenzong](https://cdn.songshenzong.com/images/logo.png)](https://songshenzong.com)
-
 [![Build Status](https://travis-ci.org/songshenzong/support.svg?branch=master)](https://travis-ci.org/songshenzong/support)
 [![Total Downloads](https://poser.pugx.org/songshenzong/support/d/total.svg)](https://packagist.org/packages/songshenzong/support)
 [![Latest Stable Version](https://poser.pugx.org/songshenzong/support/v/stable.svg)](https://packagist.org/packages/songshenzong/support)
