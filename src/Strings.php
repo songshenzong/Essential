@@ -3,6 +3,7 @@
 namespace Songshenzong\Support;
 
 use Songshenzong\Support\Traits\Str;
+use Songshenzong\Support\Traits\Uri;
 
 /**
  * Class Strings
@@ -11,5 +12,5 @@ use Songshenzong\Support\Traits\Str;
  */
 class Strings
 {
-    use Str;
+    use Str, Uri;
 }

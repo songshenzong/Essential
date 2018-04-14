@@ -17,7 +17,7 @@ trait Time
      *
      * @return false|string
      */
-    public function formatTime($time_string)
+    public static function formatTime($time_string)
     {
         $time  = time() - strtotime($time_string);
         $time1 = time() - strtotime('today');
