@@ -19,7 +19,7 @@ trait Uri
      *
      * @return string
      */
-    public static function uri(string $uri, array $parameters, bool $appendsCurrentUri = false)
+    public static function uri(string $uri, array $parameters = [], bool $appendsCurrentUri = false)
     {
         $uriComponents = parse_url($uri);
 
