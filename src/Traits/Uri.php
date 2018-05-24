@@ -44,4 +44,31 @@ trait Uri
         return $newUriComponents;
     }
 
+    /**
+     * @param $host
+     *
+     * @return bool
+     */
+    public static function host($host)
+    {
+        if (!isset($_SERVER['HTTP_HOST'])) {
+            return false;
+        }
+        $lower = \strtolower($_SERVER['HTTP_HOST']);
+
+        if (\is_string($host)) {
+            return $host === $lower;
+        }
+
+        if (\is_array($host)) {
+            foreach ($host as $item) {
+                if ($item === $lower) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        return false;
+    }
+
 }
