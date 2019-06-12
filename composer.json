@@ -1,49 +1,58 @@
 {
-  "name": "songshenzong/support",
-  "description": "The Songshenzong Support package.",
-  "keywords": [
-    "support",
-    "laravel",
-    "web"
-  ],
-  "license": "MIT",
-  "homepage": "http://songshenzong.com",
-  "support": {
-    "issues": "https://github.com/songshenzong/support/issues",
-    "source": "https://github.com/songshenzong/support"
-  },
-  "authors": [
-    {
-      "name": "Songshenzong",
-      "email": "i@songshenzong.com"
-    }
-  ],
-  "require": {
-    "php": ">=5.5",
-    "socialiteproviders/qq": "^3.0"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "^7.0",
-    "laravel/framework": "5.6.*"
-  },
-  "autoload": {
-    "psr-4": {
-      "Songshenzong\\Support\\": "src/",
-      "Songshenzong\\Support\\Test\\": "tests/"
+    "name": "songshenzong/support",
+    "description": "The Songshenzong Support package.",
+    "keywords": [
+        "support",
+        "laravel",
+        "web"
+    ],
+    "license": "MIT",
+    "homepage": "http://songshenzong.com",
+    "support": {
+        "issues": "https://github.com/songshenzong/support/issues",
+        "source": "https://github.com/songshenzong/support"
     },
-    "files": [
-      "src/StringsHelpers.php",
-      "src/BashEchoHelpers.php"
-    ]
-  },
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Songshenzong\\Support\\StringsServiceProvider"
-      ],
-      "aliases": {
-        "Strings": "Songshenzong\\Support\\StringsFacade"
-      }
+    "authors": [
+        {
+            "name": "Songshenzong",
+            "email": "i@songshenzong.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "ext-xml": "*",
+        "ext-json": "*",
+        "ext-simplexml": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8",
+        "laravel/framework": "^5.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Songshenzong\\Support\\": "src/"
+        },
+        "files": [
+            "src/StringsHelpers.php",
+            "src/BashEchoHelpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Songshenzong\\Support\\Test\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Songshenzong\\Support\\StringsServiceProvider"
+            ],
+            "aliases": {
+                "Strings": "Songshenzong\\Support\\StringsFacade"
+            }
+        }
+    },
+    "scripts": {
+        "fixer": "php-cs-fixer fix ./"
     }
-  }
 }

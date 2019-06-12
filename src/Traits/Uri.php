@@ -2,8 +2,6 @@
 
 namespace Songshenzong\Support\Traits;
 
-use function dd;
-
 /**
  * Trait Uri
  *
@@ -19,7 +17,7 @@ trait Uri
      *
      * @return string
      */
-    public static function uri(string $uri, array $parameters = [], bool $appendsCurrentUri = false)
+    public static function uri($uri, array $parameters = [], $appendsCurrentUri = false)
     {
         $uriComponents = parse_url($uri);
 
@@ -36,9 +34,9 @@ trait Uri
         }
 
         $newUriComponents = isset($uriComponents['scheme']) ? $uriComponents['scheme'] . '://' : '';
-        $newUriComponents .= $uriComponents['host'] ?? '';
+        $newUriComponents .= isset($uriComponents['host']) ? $uriComponents['host'] : '';
         $newUriComponents .= isset($uriComponents['port']) ? ':' . $uriComponents['port'] : '';
-        $newUriComponents .= $uriComponents['path'] ?? '';
+        $newUriComponents .= isset($uriComponents['path']) ? $uriComponents['path'] : '';
         $newUriComponents .= '?' . http_build_query($newQuery);
 
         return $newUriComponents;
@@ -66,9 +64,10 @@ trait Uri
                     return true;
                 }
             }
+
             return false;
         }
+
         return false;
     }
-
 }

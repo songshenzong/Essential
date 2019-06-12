@@ -2,12 +2,14 @@
 
 namespace Songshenzong\Support;
 
+use Illuminate\Support\Facades\Facade;
+
 /**
  * Class StringsFacade
  *
  * @package Songshenzong\Support
  */
-class StringsFacade extends \Illuminate\Support\Facades\Facade
+class StringsFacade extends Facade
 {
     /**
      * @return string

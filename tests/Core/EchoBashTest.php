@@ -12,7 +12,6 @@ use PHPUnit\Framework\TestCase;
 class EchoBashTest extends TestCase
 {
 
-
     /**
      * @throws \PHPUnit\Framework\ExpectationFailedException
      * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
@@ -27,5 +26,4 @@ class EchoBashTest extends TestCase
         echoBlue('echo Blue');
         $this->assertEquals(true, true);
     }
-
 }

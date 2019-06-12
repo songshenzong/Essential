@@ -2,13 +2,14 @@
 
 namespace Songshenzong\Support;
 
+use Illuminate\Support\ServiceProvider;
 
 /**
  * Class StringsServiceProvider
  *
  * @package Songshenzong\Support
  */
-class StringsServiceProvider extends \Illuminate\Support\ServiceProvider
+class StringsServiceProvider extends ServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred.
@@ -17,7 +18,6 @@ class StringsServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     protected $defer = false;
 
-
     /**
      * Register the service provider.
      *
@@ -25,9 +25,12 @@ class StringsServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function register()
     {
-        $this->app->singleton('Strings', function () {
-            return new Strings();
-        });
+        $this->app->singleton(
+            'Strings',
+            static function () {
+                return new Strings();
+            }
+        );
 
         $this->app->alias('Strings', StringsFacade::class);
     }

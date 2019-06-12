@@ -12,7 +12,6 @@ if (!function_exists('echoRed')) {
     }
 }
 
-
 if (!function_exists('echoGreen')) {
     /**
      * @param $string
@@ -23,7 +22,6 @@ if (!function_exists('echoGreen')) {
     }
 }
 
-
 if (!function_exists('echoBrown')) {
     /**
      * @param $string
@@ -33,7 +31,6 @@ if (!function_exists('echoBrown')) {
         BashEcho::echoBrown($string);
     }
 }
-
 
 if (!function_exists('echoBlue')) {
 
@@ -55,7 +52,6 @@ if (!function_exists('echoPurple')) {
         BashEcho::echoPurple($string);
     }
 }
-
 
 if (!function_exists('echoCyan')) {
     /**

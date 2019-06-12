@@ -2,9 +2,9 @@
 
 namespace Songshenzong\Support\Test\Core;
 
+use stdClass;
 use PHPUnit\Framework\TestCase;
 use Songshenzong\Support\Strings;
-use stdClass;
 
 /**
  * Class StrTest
@@ -37,7 +37,6 @@ ETO;
      */
     protected $jsonString = '{ "tools": [ { "name":"css format" , "site":"https://songshenzong.com" }, { "name":"pwd check" , "site":"https://songshenzong.com" } ] }';
 
-
     /**
      * @var array
      */
@@ -60,7 +59,6 @@ ETO;
         $this->assertEquals(true, Strings::isJson($this->simpleJsonString));
         $this->assertEquals(true, Strings::isJson($this->jsonString));
     }
-
 
     /**
      * @throws \PHPUnit\Framework\ExpectationFailedException
@@ -107,6 +105,4 @@ ETO;
         $this->assertArrayHasKey('book', Strings::xmlToArray($this->xmlString));
         $this->assertObjectHasAttribute('book', Strings::xmlToObject($this->xmlString));
     }
-
-
 }

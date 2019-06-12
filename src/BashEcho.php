@@ -1,6 +1,7 @@
 <?php
 
 namespace Songshenzong\Support;
+
 /**
  * Class BashEcho
  *
@@ -19,7 +20,6 @@ class BashEcho
         print  $a . PHP_EOL;
     }
 
-
     /**
      * @param string $string
      */
@@ -29,7 +29,6 @@ class BashEcho
         $a   = exec($cmd);
         print $a . PHP_EOL;
     }
-
 
     /**
      * @param string $string
@@ -41,7 +40,6 @@ class BashEcho
         print $a . PHP_EOL;
     }
 
-
     /**
      * @param string $string
      */
@@ -51,7 +49,6 @@ class BashEcho
         $a   = exec($cmd);
         print $a . PHP_EOL;
     }
-
 
     /**
      * @param string $string
@@ -63,7 +60,6 @@ class BashEcho
         print $a . PHP_EOL;
     }
 
-
     /**
      * @param string $string
      */
@@ -73,6 +69,4 @@ class BashEcho
         $a   = exec($cmd);
         print  $a . PHP_EOL;
     }
-
-
 }
