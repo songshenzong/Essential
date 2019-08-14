@@ -2,6 +2,8 @@
 
 namespace Songshenzong\Support;
 
+use InvalidArgumentException;
+
 /**
  * Class Arrays
  *
@@ -36,5 +38,31 @@ class Arrays
         }
 
         return $result;
+    }
+
+    /**
+     * Returns item from array or $default if item is not set.
+     *
+     * @param array            $array
+     * @param string|int|array $key one or more keys
+     * @param null             $default
+     *
+     * @return mixed
+     */
+    public static function get(array $array, $key, $default = null)
+    {
+        foreach (is_array($key) ? $key : [$key] as $k) {
+            if (is_array($array) && array_key_exists($k, $array)) {
+                $array = $array[$k];
+            } else {
+                if (func_num_args() < 3) {
+                    throw new InvalidArgumentException("Missing item '$k'.");
+                }
+
+                return $default;
+            }
+        }
+
+        return $array;
     }
 }
