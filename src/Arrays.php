@@ -65,4 +65,20 @@ class Arrays
 
         return $array;
     }
+
+    /**
+     * @param array $system_version
+     */
+    public static function versionCompare(array &$system_version)
+    {
+        for ($i = 0; $i < count($system_version) - 1; $i++) {
+            for ($j = 0; $j < count($system_version) - 1 - $i; $j++) {
+                if (version_compare($system_version[$j], $system_version[$j + 1], '<')) {
+                    $tmp                    = $system_version[$j];
+                    $system_version[$j]     = $system_version[$j + 1];
+                    $system_version[$j + 1] = $tmp;
+                }
+            }
+        }
+    }
 }
