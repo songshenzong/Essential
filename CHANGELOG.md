@@ -2,6 +2,9 @@
 
 ---
 
+## 2.0.3 - 2019-08-27
+- Added `Env` for `OS`.
+
 ## 2.0.2 - 2019-08-14
 - Added `get` for `Arrays`.
 
