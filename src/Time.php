@@ -16,13 +16,18 @@ class Time
      *
      * @return array
      */
-    public static function dates($begin_time, $end_time)
+    public static function dates($begin_time, $end_time = null)
     {
+        if ($end_time === null) {
+            $end_time = time();
+        }
+
         // Y-m-d to timestamp
         if (!is_int($begin_time)) {
             $begin_time = strtotime($begin_time);
         }
 
+        // Y-m-d to timestamp
         if (!is_int($end_time)) {
             $end_time = strtotime($end_time);
         }
