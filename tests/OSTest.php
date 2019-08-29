@@ -43,5 +43,4 @@ class OSTest extends TestCase
         $method->setAccessible(true);
         $this->assertEquals('/root', $method->invoke(null));
     }
-
 }

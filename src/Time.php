@@ -1,14 +1,40 @@
 <?php
 
-namespace Songshenzong\Support\Traits;
+namespace Songshenzong\Support;
 
 /**
- * Trait Time
+ * Class Time
  *
- * @package Songshenzong\Support\Traits
+ * @package Songshenzong\Support
  */
-trait Time
+class Time
 {
+
+    /**
+     * @param int|string $begin_time
+     * @param int|string $end_time
+     *
+     * @return array
+     */
+    public static function dates($begin_time, $end_time)
+    {
+        // Y-m-d to timestamp
+        if (!is_int($begin_time)) {
+            $begin_time = strtotime($begin_time);
+        }
+
+        if (!is_int($end_time)) {
+            $end_time = strtotime($end_time);
+        }
+
+        $dates = [];
+
+        for ($start = $begin_time; $start <= $end_time; $start += 86400) {
+            $dates[] = date('Y-m-d', $start);
+        }
+
+        return $dates;
+    }
 
     /**
      * Format Time.
